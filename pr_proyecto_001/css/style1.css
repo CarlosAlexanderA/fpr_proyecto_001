@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*estilizamos el encabezado*/
+body{
+    width: 100%;
+}
+header{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    background: red;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 200;
+
+}
+.logo_pag{
+    display: flex;
+    align-items: center;
+
+}
+.logo_pag img {
+    width: 70px;
+    margin-right: 15px;
+}
+.logo_pag h1{
+    font-weight: 600;
+}
+header nav{
+    display: flex;
+    align-items: center;
+}
+header nav a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+header nav a:hover{
+    color: white;
+}
+/**/
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+/*creacion de una la ventana flotante de registro de sesion*/
+.centrar_ventana{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    justify-content: center;
+}
+.centrar_ventana .cerrar{
+
+}
+.cerrar img{
+    width: 20px;
+        
+}
+.login img{
+    width: 150px;
+}
+.login form{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.ventana{
+    background: rgba(100, 105, 102, 1);
+    width: 600px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    text-align: center;
+    padding: 33px;
+    min-height: 400px;
+    border-radius: 22px;
+    position: absolute;
+    
+    top: 20vh;
+    
+}
+
+
+/*se empieza a crear la ventana principal*/
+.img_title{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    background-image: url("galeria/fondo_login.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    width: 100%;
+    Height: 100vh;
+
+}
+
+
+main{
+    z-index: 300;
+    width: 100%;
+    position: absolute;
+    top:100vh ;
+}
+main .container_001{
+
+}
+main .title_001{
+    
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title_001 h3{
+    
+    font-size: 2rem;
+
+}
+.title_001 h5{
+    margin-top: 1.5vh;
+    color: gray;
+}
+main .servicios{
+    padding-top: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 8vh ;
+    
+}
+main .servicios_capa{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+.servicios .box_aplication{
+    width: 400px;
+    background: #ef7;
+    height: 350px;
+    margin:20px 15px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.box_aplication .logo_netflix{
+    width: 200px;
+
+}
+h3{
+    font-size: 2rem;
+}
+main .guia{
+    background: salmon;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.guia .title_002{
+    padding-top: 8vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vh;
+}
+.guia .title_002 h3{
+    font-size: 2rem;
+    padding-bottom: 1vh;
+
+}
+main .guia_down{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.guia_down .guia_description{
+    width: 400px;
+    height: 250px;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.guia_description h4{
+
+}
+/*metodologia ____*/
+
+main .metodologia_linea{
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .title_003{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .lineaT{
+    padding-top: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.lineaT .bloque_linea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #adc;
+    width: 350px;
+    height: 300px;
+    margin: 10px 20px;
+}

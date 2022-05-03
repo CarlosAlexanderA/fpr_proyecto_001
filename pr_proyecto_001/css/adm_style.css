@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.body_adm{
+    overflow: hidden;
+}
+/*empezamos el encabezado*/
+.container_head{
+    display: flex;
+    width: 100%;
+    background-color: pink;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo_admin{
+    width: 60px;
+    margin-right:20px;
+    margin-left: 10px;
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.head_option{
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.head_logo a{
+    
+    text-decoration: none;
+    
+   
+}
+.head_option ul{
+    margin-top: 0;
+    padding:10px;
+    
+
+}
+.head_option ul li{
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    
+}
+.head_option li:hover{
+    color: white;
+}
+/*empezamos con la barra de opciones lateral*/
+aside{
+    
+    background: #866e6e;
+    position: absolute;
+    width: 12.5rem;
+    left: 0;
+    height: 91.8%;
+}
+/*creamos un maximo y minimo para la pantalla*/
+@media (max-width:990px){
+    .container_head{
+        flex-direction: column;
+    }
+    .head_option{
+        padding: 10px 0px;
+        font-size: 15px;
+    }
+    aside{
+        background: #866e6e;
+        position: absolute;
+        width: 12.5rem;
+        left: 0;
+        height: 85.7%;
+    }
+}
+.options_square ul{
+    margin: 0;
+    padding-left: 10px;
+}
+.options_square ul li{
+    padding-top: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    list-style:none;
+    float: left;
+}
+.options_square ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    
+}
+.options_square ul a:hover{
+    color: white;
+}
+
+/*creamos el cuadro de usuario- tabla-pagina*/
+main{
+    position: relative;
+    width: 0;
+    margin-left: 200px ;
+    
+    
+}
+
+/*creamos el cuadro donde va el cuerpo*/
+
+.squre_container{
+    width: 177.5vh;
+    height: 85vh;
+    margin-right:7% ;
+    background-color: rgba(252, 140, 49, 0.705);
+    margin: 0;
+    overflow: auto;
+    padding: 40px 0;
+   
+    
+}
+/* estilizamos la pagina principal*/
+.homepage{
+    width: 95%;
+    margin:0 40px;
+    border: 1px solid black;
+    
+}
+/*contenido de lista de usuarios*/
+
+.list_user{
+    display: none;
+    width: 95%;
+    margin:0 40px;
+    
+}
+/* estilizamos los encabezados de la tabla listar usuarios*/
+.table_user{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+}
+.table_user div{
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tbl_head{
+    font-size: 25px;
+    font-weight: 600;
+    height: 80px;
+    background-color:peru;
+    border: 3px solid salmon;
+    color:maroon;
+}
+.table_user .IdUser, .NameUser, .TimeUser, .ProveedorUser, .ConditionUser{
+    margin: 0.5px;
+    border: 2px solid salmon;
+    background-color: khaki;
+    font-size: 20px;
+    color:midnightblue;
+    font-weight: bold;
+}
+
+
+
