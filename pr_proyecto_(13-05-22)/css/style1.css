@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*estilizamos el encabezado*/
+body{
+    width: 100%;
+}
+header{
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: red;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    padding:15px 0;
+
+}
+.logo_pag{
+    display: flex;
+    align-items: center;
+
+}
+.logo_pag img {
+    width: 50px;
+    margin-right: 15px;
+}
+.logo_pag .txt_logo{
+    font-weight: 700;
+    border-left: 3px solid #212529 ; 
+    color: #212529;
+    padding-left:15px ;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+nav ul{
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+nav ul li{
+    flex: 0 0 auto;
+    width: auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+nav a{
+    text-decoration: none;
+    color: #212529;  
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+header nav a:hover{
+    color: #f8f9fa;
+}
+/**/
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+/*creacion de una la ventana flotante de registro de sesion*/
+
+.centrar_ventana{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    justify-content: center;
+}
+.centrar_ventana .cerrar{
+
+}
+.cerrar img{
+    width: 20px;
+        
+}
+.login img{
+    width: 150px;
+}
+.login form{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.ventana{
+    background: rgba(100, 105, 102, 1);
+    width: 600px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    text-align: center;
+    padding: 33px;
+    min-height: 400px;
+    border-radius: 22px;
+    position: absolute;
+    
+    top: 20vh;
+    
+}
+
+
+/*se empieza a crear la ventana principal*/
+.img_title{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    background-image: url("galeria/fondo_login.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    width: 100%;
+    Height: 100vh;
+
+}
+
+
+main{
+    z-index: 300;
+    width: 100%;
+    position: absolute;
+    top:100vh ;
+}
+
+
+main .container_001{
+
+}
+main .title_001{
+    
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5vh;
+}
+
+.title_001 .h2_ttl{
+    font-size: 2rem;
+    color: #212529;
+    
+
+}
+.title_001 h4{
+    
+    color: #6c757d;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+
+
+
+main .servicios{
+    padding-top: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 8vh ;
+    
+}
+
+.servicios .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    column-gap: 50px;
+
+}
+.servicios .card{
+    width: 400px;
+    max-width: 100%;
+   }
+.container .card .icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://help.nflxext.com/43e0db2f-fea0-4308-bfb9-09f2a88f6ee4_what_is_netflix_1_en.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .card .icon img{
+    width: 200px;
+}
+
+
+
+.container .card .slide {
+  width: 400px;
+  max-width: 100%;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .slide.slide1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 0.7s;
+  transform: translateY(100px);
+}
+.container .card:hover .slide.slide1 {
+  transform: translateY(0px);
+}
+.container .card .slide.slide2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.8s;
+  transform: translateY(-100px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container .card:hover .slide.slide2 {
+  transform: translateY(0);
+}
+
+.container .card .slide.slide2 .content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #414141;
+}
+
+.container .card .slide.slide2 .content h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #414141;
+}
+
+
+
+
+
+h3{
+    font-size: 2rem;
+}
+
+
+/*section guia */
+main .guia{
+    background: salmon;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.guia .title_002{
+    padding-top: 8vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vh;
+}
+.guia .title_002 h3{
+    font-size: 2rem;
+    padding-bottom: 1vh;
+
+}
+main .guia_down{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+.guia_down .img_center{
+    width: 500px;
+}
+.guia_down img{
+    width: 490px;
+    max-width: 100%;
+    height: auto;
+}
+.guia_down .guia_description{
+    width: 400px;
+    max-width: 100%;
+    height: 250px;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px ;
+
+}
+.guia_down .guia_d-1{
+ order: -1;
+}
+.guia_description h4{
+
+}
+
+/*metodologia ____*/
+
+main .metodologia_linea{
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .title_003{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .lineaT{
+    padding-top: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.lineaT .bloque_linea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #adc;
+    width: 350px;
+    height: 300px;
+    margin: 10px 20px;
+}
+
+
+
+/*section de contadores */
+main .contadores{
+ width: 100%;
+ display: flex;
+ position: relative;
+ justify-content: center;
+ align-items: center;
+ background: salmon;
+ flex-wrap: wrap;
+ padding: 50px 0;
+}
+.cont_card {
+        margin: 20px;
+        background-color: #fff;
+        width: 300px;
+        min-width: 150px;
+        height: 200px;
+        border-radius: 12px 12px 0 0;
+        position: relative;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+      }/*
+      .stats-container.orange {
+        border-bottom: 5px solid #fca311;
+      }
+      .stats-container.blue {
+        border-bottom: 5px solid #0096c7;
+      }
+      .stats-container.red {
+        border-bottom: 5px solid #e63946;
+      }
+      .stats-container.orange i {
+        color: #fca311;
+      }
+      .stats-container.red i {
+        color: #e63946;
+      }
+      .stats-container.blue i {
+        color: #0096c7;
+      }*/
+.cont_card .parte_1{
+    width: 50%;
+}      
+.cont_card .parte_1 img{
+    width: 100%;
+}
+      .cont_card div{
+          text-align: center;
+      }
+.contadores span{
+    font-size: 1.2rem;
+
+}
+.contadores .space_2{
+    margin-top: .5vh;}
+.contadores .contador{
+    font-weight: 700;
+}
